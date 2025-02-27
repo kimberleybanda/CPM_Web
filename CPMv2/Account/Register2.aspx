@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Root.master" CodeBehind="Register2.aspx.cs" Inherits="CPMv2.Register2" Title="Sign In" %>
+﻿<%@ Page Language="C#" Async="true" AutoEventWireup="true" MasterPageFile="~/Root.master" CodeBehind="Register2.aspx.cs" Inherits="CPMv2.Register2" Title="Sign In" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="Head">
     <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/SignInRegister.css") %>' />
@@ -51,18 +51,54 @@
               </div>
               <div class="card-body">
                 <form role="form" class="text-start">
-                    <label class="form-label">Phone</label>
 
+                    <label class="form-label">Full Name</label>
+                    <div class="input-group input-group-outline my-3">
+                        <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" />
+                    </div>
+
+                    <label class="form-label">Phone</label>
                   <div class="input-group input-group-outline my-3">
-                      <asp:TextBox ID="UserNameTextBox" runat="server" CssClass="form-control" />
+                      <asp:TextBox ValidationExpression="^2637[0-9]{8}$" ID="UserNameTextBox" runat="server" CssClass="form-control" />
                   </div>
+                    
+                    <label class="form-label">Select Country</label>
+                    <div class="input-group input-group-outline mb-3">
+                        <asp:DropDownList OnSelectedIndexChanged="drpCountry_OnChanged" class="form-control"  ID="drpCountry" runat="server" Width="300px" AutoPostBack="true">
+                        </asp:DropDownList>
+                    </div>
+                    
+                    <label class="form-label">Select City</label>
+                    <div class="input-group input-group-outline mb-3">
+                        <asp:DropDownList OnSelectedIndexChanged="drpCity_OnChanged" class="form-control"  ID="drpCity" runat="server" Width="300px" AutoPostBack="true">
+                        </asp:DropDownList>
+                    </div>
+                    
+
                  
                     <label class="form-label">Select User Type</label>
                     <div class="input-group input-group-outline mb-3">
-                       
                         <asp:DropDownList OnSelectedIndexChanged="drpUserType_OnChanged" class="form-control"  ID="drpUserType" runat="server" Width="300px" AutoPostBack="true">
                         </asp:DropDownList>
                     </div>
+                    
+                    <label class="form-label">Upload National ID</label>
+                    <div class="input-group input-group-outline mb-3">
+                        <asp:FileUpload ID="fileUpload1" runat="server" />
+                    </div>
+                    
+                    <label class="form-label">3 Months Bank Statement</label>
+                    <div class="input-group input-group-outline mb-3">
+                        <asp:FileUpload ID="fileUpload2" runat="server" />
+                    </div>
+                    
+                    <label class="form-label">Proof Of Residency</label>
+                    <div class="input-group input-group-outline mb-3">
+                        <asp:FileUpload ID="fileUpload3" runat="server" />
+                    </div>
+                    
+                    
+
                     <label class="form-label">Password</label>
                   <div class="input-group input-group-outline mb-3">
                    

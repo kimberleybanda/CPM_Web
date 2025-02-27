@@ -295,6 +295,7 @@
     <Content Include="Global.asax" />
     <Content Include="DealsApprovals.aspx" />
     <Content Include="ProductSettings.aspx" />
+    <Content Include="VerificationSettings.aspx" />
     <Content Include="TrainingSettings.aspx" />
     <Content Include="Training.aspx" />
     <Content Include="ProductsSettings.aspx" />
@@ -615,6 +616,12 @@
     <Compile Include="ProductSettings.aspx.designer.cs">
       <DependentUpon>ProductSettings.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VerificationSettings.aspx.cs">
+      <DependentUpon>VerificationSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerificationSettings.aspx.designer.cs">
+      <DependentUpon>VerificationSettings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TrainingSettings.aspx.cs">
       <DependentUpon>TrainingSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -683,6 +690,7 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="RegistrationsUploads\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <PropertyGroup>

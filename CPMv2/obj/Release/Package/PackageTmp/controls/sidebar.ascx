@@ -74,6 +74,14 @@
                   <span class="nav-link-text ms-1">Training Settings</span>
               </a>
           </li>
+          
+          <li id="divVerificationSettings" runat="server" class="nav-item">
+              <a class="nav-link text-dark" href="VerificationSettings.aspx">
+                  <i class="material-symbols-rounded opacity-5">person</i>
+                  <span class="nav-link-text ms-1">Verification Settings</span>
+              </a>
+          </li>
+
         <li class="nav-item">
           <a class="nav-link text-dark" href="Account/SignIn.aspx">
             <i class="material-symbols-rounded opacity-5">login</i>

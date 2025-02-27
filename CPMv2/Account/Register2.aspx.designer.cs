@@ -15,6 +15,15 @@ namespace CPMv2
     {
 
         /// <summary>
+        /// txtFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullName;
+
+        /// <summary>
         /// UserNameTextBox control.
         /// </summary>
         /// <remarks>
@@ -24,6 +33,24 @@ namespace CPMv2
         protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
 
         /// <summary>
+        /// drpCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpCountry;
+
+        /// <summary>
+        /// drpCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpCity;
+
+        /// <summary>
         /// drpUserType control.
         /// </summary>
         /// <remarks>
@@ -31,6 +58,33 @@ namespace CPMv2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drpUserType;
+
+        /// <summary>
+        /// fileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload1;
+
+        /// <summary>
+        /// fileUpload2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload2;
+
+        /// <summary>
+        /// fileUpload3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload3;
 
         /// <summary>
         /// PasswordButtonEdit control.

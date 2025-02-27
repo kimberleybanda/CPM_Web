@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Leroy Chiyangwa\source\repos\CPMv2\CPMv2\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2025-02-12T20:38:34.1168911Z;True|2025-02-06T06:09:43.5216136+02:00;</History>
+    <History>True|2025-02-27T10:14:51.0802002Z;True|2025-02-12T22:38:34.1168911+02:00;True|2025-02-06T06:09:43.5216136+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -13,7 +13,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:21</publishTime>
     </File>
     <File Include="Account/Register2.aspx">
-      <publishTime>02/06/2025 05:04:54</publishTime>
+      <publishTime>02/26/2025 04:04:08</publishTime>
     </File>
     <File Include="Account/SignIn.aspx">
       <publishTime>02/06/2025 06:07:09</publishTime>
@@ -37,10 +37,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:22</publishTime>
     </File>
     <File Include="bin/CPMv2.dll">
-      <publishTime>02/12/2025 22:38:31</publishTime>
+      <publishTime>02/27/2025 12:14:48</publishTime>
     </File>
     <File Include="bin/CPMv2.pdb">
-      <publishTime>02/12/2025 22:38:31</publishTime>
+      <publishTime>02/27/2025 12:14:48</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Data.v22.1.resources.dll">
       <publishTime>01/06/2025 09:44:35</publishTime>
@@ -1384,7 +1384,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:23</publishTime>
     </File>
     <File Include="controls/sidebar.ascx">
-      <publishTime>02/12/2025 05:49:28</publishTime>
+      <publishTime>02/27/2025 11:06:04</publishTime>
     </File>
     <File Include="DealsApprovals.aspx">
       <publishTime>02/11/2025 21:59:41</publishTime>
@@ -1424,6 +1424,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="TrainingSettings.aspx">
       <publishTime>02/04/2025 14:53:54</publishTime>
+    </File>
+    <File Include="VerificationSettings.aspx">
+      <publishTime>02/27/2025 12:07:59</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>02/06/2025 06:09:41</publishTime>

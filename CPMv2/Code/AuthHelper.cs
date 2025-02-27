@@ -8,6 +8,7 @@ using CPMv2.Helpers;
 using CPMv2.Code;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using DevExpress.XtraRichEdit.Model;
 
 namespace CPMv2.Model {
     public class ApplicationUser {
@@ -65,6 +66,19 @@ namespace CPMv2.Model {
         public UserType2 userType { get; set; }
     }
 
+
+
+
+
+    public class Registration
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string password { get; set; }
+        public string phone { get; set; }
+        public UserType2 userType { get; set; }
+    }
+
     public class UserType2
     {
         public int id { get; set; }
@@ -80,6 +94,13 @@ namespace CPMv2.Model {
         public bool data { get; set; }
     }
 
+    public class RootActivate
+    {
+        public object status { get; set; }
+        public int code { get; set; }
+        public string message { get; set; }
+        public long data { get; set; }
+    }
     public class RootRegister
     {
         public object status { get; set; }
@@ -88,7 +109,59 @@ namespace CPMv2.Model {
         public Login2 data { get; set; }
     }
 
+
+    public class Countries
+    {
+        public long id { get; set; }
+        public String name { get; set; }
+    }
+
+    public class City
+    {
+        public long id { get; set; }
+        public String name { get; set; }
+    }
+
+    public class CustomUsers
+    {
+        public long id { get; set; }
+        public String name { get; set; }
+        public String phone { get; set; }
+        public String nationalIdUrl { get; set; }
+        public String bankStatementUrl { get; set; }
+        public String proofOfResidencyUrl { get; set; }
+        public bool approved { get; set; }
+    }
+
+
     public static class AuthHelper {
+
+        public static List<CustomUsers> GetCustomUsers()
+        {
+
+            List<CustomUsers> customUsersList = new List<CustomUsers>();
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/approvedUsers";
+                var endpoint3 = new Uri(url);
+
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    customUsersList = JsonConvert.DeserializeObject<List<CustomUsers>>(result3);
+
+                   
+
+                }
+                catch (Exception eecc)
+                {
+                }
+
+                return customUsersList;
+
+            }
+
+        }
 
         public static bool register(Login2 login2)
         {
@@ -136,6 +209,7 @@ namespace CPMv2.Model {
 
             return c;
         }
+
         public static List<UserTypes> getUserTypes()
         {
 
@@ -167,6 +241,49 @@ namespace CPMv2.Model {
 
                 return userTypesList;
 
+            }
+
+        }
+        public static List<Countries> getCountry()
+        {
+
+            List<Countries> countriesList = new List<Countries>();
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/countries";
+                var endpoint3 = new Uri(url);
+
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    countriesList  = JsonConvert.DeserializeObject<List<Countries>>(result3);
+
+                }
+                catch (Exception eecc)
+                {
+                }
+
+                return countriesList;
+
+            }
+
+        }
+        public static List<City> getCity()
+        {
+            List<City> countriesList = new List<City>();
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/cities";
+                var endpoint3 = new Uri(url);
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    countriesList = JsonConvert.DeserializeObject<List<City>>(result3);
+                }
+                catch (Exception eecc)
+                {
+                }
+                return countriesList;
             }
 
         }
