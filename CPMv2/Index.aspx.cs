@@ -26,16 +26,11 @@ namespace CPMv2 {
                     var cx = JsonConvert.DeserializeObject<UserTypes>(xx.ToString());
                     if (cx.name.Equals("admin"))
                     {
-                        lblClosedDeals.Text = DealsContextProvider.GetAdminApprovedDeals().ToString();
+                        lblClosedDeals.Text = DealsContextProvider.GetAdminApprovedUsers().ToString();
 
-                        lblOpenDeals.Text = DealsContextProvider.GetAdminNonApprovedDeals().ToString();
+                        lblOpenDeals.Text = DealsContextProvider.GetAdminNonApprovedUsers().ToString();
                     }
-                    else
-                    {
-                        lblClosedDeals.Text = DealsContextProvider.GetApprovedDeals((int)HttpContext.Current.Session["loggerId"]).ToString();
-
-                        lblOpenDeals.Text = DealsContextProvider.GetNonApprovedDeals((int)HttpContext.Current.Session["loggerId"]).ToString();
-                    }
+            
 
 
                 }
@@ -49,9 +44,9 @@ namespace CPMv2 {
                     var cx = JsonConvert.DeserializeObject<UserTypes>(xx.ToString());
                     if (cx.name.Equals("admin"))
                     {
-                        lblClosedDeals.Text = DealsContextProvider.GetAdminApprovedDeals().ToString();
+                        lblClosedDeals.Text = DealsContextProvider.GetAdminApprovedUsers().ToString();
 
-                        lblOpenDeals.Text = DealsContextProvider.GetAdminNonApprovedDeals().ToString();
+                        lblOpenDeals.Text = DealsContextProvider.GetAdminNonApprovedUsers().ToString();
                     }
                     else
                     {

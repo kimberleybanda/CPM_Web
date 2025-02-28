@@ -162,7 +162,7 @@
             <div class="card-header p-2 ps-3">
               <div class="d-flex justify-content-between">
                 <div>
-                  <p class="text-sm mb-0 text-capitalize">Closed Deals</p>
+                  <p class="text-sm mb-0 text-capitalize">Pending Approvals</p>
                     <asp:Label class="mb-0" ID="lblClosedDeals" runat="server"></asp:Label>
                 </div>
                 <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
@@ -181,7 +181,7 @@
             <div class="card-header p-2 ps-3">
               <div class="d-flex justify-content-between">
                 <div>
-                  <p class="text-sm mb-0 text-capitalize">Open Deals</p>
+                  <p class="text-sm mb-0 text-capitalize">Approved Users</p>
                     <asp:Label class="mb-0" ID="lblOpenDeals" runat="server"></asp:Label>
                 </div>
                 <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">

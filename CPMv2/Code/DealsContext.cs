@@ -218,6 +218,70 @@ public class UserType
             }
         }
 
+        public static int GetAdminApprovedUsers()
+        {
+            int approvedDeals = 0;
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/users_adminapproved";
+                var endpoint3 = new Uri(url);
+
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    var cp3 = JsonConvert.DeserializeObject<RootApprovedDeals>(result3);
+
+                    if (cp3.code == 200)
+                    {
+                        approvedDeals = cp3.data;
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                catch (Exception eecc)
+                {
+                }
+
+                return approvedDeals;
+
+            }
+        }
+
+        public static int GetAdminNonApprovedUsers()
+        {
+            int approvedDeals = 0;
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/users_adminnonapproved";
+                var endpoint3 = new Uri(url);
+
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    var cp3 = JsonConvert.DeserializeObject<RootApprovedDeals>(result3);
+
+                    if (cp3.code == 200)
+                    {
+                        approvedDeals = cp3.data;
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                catch (Exception eecc)
+                {
+                }
+
+                return approvedDeals;
+
+            }
+        }
+
         public static int GetAdminApprovedDeals()
         {
             int approvedDeals = 0;
