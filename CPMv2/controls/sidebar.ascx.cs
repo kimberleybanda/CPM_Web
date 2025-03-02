@@ -29,6 +29,9 @@ namespace CPMv2.controls
                 divProductSettings.Visible = false;
                 divDealsApprovals.Visible= false;
                 divTrainingSettings.Visible = false;
+                divVerificationSettings.Visible= false;
+                divDashBoard.Visible = false;
+                divDealsPayments.Visible=true;
             }
 
             if (cx.name.Equals("admin"))
@@ -37,6 +40,9 @@ namespace CPMv2.controls
                 divProductSettings.Visible = true;
                 divDealsApprovals.Visible = true;
                 divTrainingSettings.Visible = true;
+                divVerificationSettings.Visible = true;
+                divDashBoard.Visible = true;
+                divDealsPayments.Visible = false;
             }
 
 

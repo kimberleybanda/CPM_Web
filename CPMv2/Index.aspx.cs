@@ -27,7 +27,6 @@ namespace CPMv2 {
                     if (cx.name.Equals("admin"))
                     {
                         lblClosedDeals.Text = DealsContextProvider.GetAdminApprovedUsers().ToString();
-
                         lblOpenDeals.Text = DealsContextProvider.GetAdminNonApprovedUsers().ToString();
                     }
             

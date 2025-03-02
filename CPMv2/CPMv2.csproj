@@ -291,6 +291,7 @@
     <Content Include="Content\SignInRegister.css" />
     <Content Include="Content\SignInRegister.js" />
     <Content Include="controls\sidebar.ascx" />
+    <Content Include="DealsPayments.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="DealsApprovals.aspx" />
@@ -590,6 +591,12 @@
     </Compile>
     <Compile Include="controls\sidebar.ascx.designer.cs">
       <DependentUpon>sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DealsPayments.aspx.cs">
+      <DependentUpon>DealsPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DealsPayments.aspx.designer.cs">
+      <DependentUpon>DealsPayments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

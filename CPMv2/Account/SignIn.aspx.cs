@@ -68,7 +68,19 @@ namespace CPMv2 {
                             HttpContext.Current.Session["loggerPhone"] = login2.phone;
                             HttpContext.Current.Session["userType"] = login2.userType;
 
+                           
+
+                            Object xx = HttpContext.Current.Session["userType"];
+                            var cx = JsonConvert.DeserializeObject<UserTypes>(xx.ToString());
+                            if (cx.name.Equals("agent"))
+                            {
+                                Response.Redirect("~/Products.aspx");
+                        }
+
+                            if (cx.name.Equals("admin"))
+                            {
                             Response.Redirect("~/Index.aspx");
+                        }
                     }
                     }
                     catch (System.Exception es)

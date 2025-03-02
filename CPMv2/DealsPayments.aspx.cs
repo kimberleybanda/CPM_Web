@@ -1,14 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Web;
+using System.Web.UI.WebControls;
 using CPMv2.Code;
 using CPMv2.DealsCode;
+using CPMv2.Helpers;
 using CPMv2.Model;
 using DevExpress.Web;
+using Newtonsoft.Json;
 
 namespace CPMv2 {
-    public partial class DealsApprovals : System.Web.UI.Page {
+
+    public class PaynowModel
+    {
+
+        public String phone { get; set; }
+        public double amount { get; set; }
+    }
+    public partial class DealsPayments : System.Web.UI.Page {
         protected void GridView_InitNewRow(object sender, DevExpress.Web.Data.ASPxDataInitNewRowEventArgs e) {
             e.NewValues["Kind"] = 1;
             e.NewValues["Priority"] = 2;
@@ -27,16 +39,17 @@ namespace CPMv2 {
                 Response.Redirect("~/Account/SignIn.aspx");
             }
             int c = 6;
+           int loggerId = (int)HttpContext.Current.Session["loggerId"];
             if (IsPostBack)
             {
                 
-                List<DealsCustom> productList = DealsContextProvider.GetDeals(false);
+                List<DealsCustom> productList = DealsContextProvider.GetDealsUsers(true, loggerId);
                 GridView1.DataSource = productList;
                 GridView1.DataBind();
             }
             else
             {
-                List<DealsCustom> productList = DealsContextProvider.GetDeals(false);
+                List<DealsCustom> productList = DealsContextProvider.GetDealsUsers(true, loggerId);
                 GridView1.DataSource = productList;
                 GridView1.DataBind();
 
@@ -55,20 +68,52 @@ namespace CPMv2 {
             }*/
         }
 
+        
+
+        protected void PayButton_Click(object sender, EventArgs e)
+        {
+            var client = new HttpClient();
+            {
+                var endpoint = new Uri(Helper.GetBaseUrl() + "v1/api/paynow");
+
+                var newPost = new PaynowModel();
+                // {
+               Object xcx= txtEcoPhone.Text;
+               Object amount = amount3;
+                newPost.phone = txtEcoPhone.Text.ToString();
+                newPost.amount = double.Parse(amount3);
+                //};
+                try
+                {
+                    var newPostJson = JsonConvert.SerializeObject(newPost);
+                    var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
+                    var result = client.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
+                    var x = JsonConvert.DeserializeObject<Rootx>(result);
+                   
+                }
+                catch (System.Exception es)
+                {
+                    // Logging.WriteLogFile(e.ToString());
+                }
+            }
+            pcSearch.ShowOnPageLoad = false;
+        }
+
+        public static String amount3;
         protected void Grid_ContextMenuItemClick(object sender, ASPxGridViewContextMenuItemClickEventArgs e)
         {
             var trxnID = GridView1.GetSelectedFieldValues("id");
             int Id = (int)trxnID.First();
 
-           
-                if (e.Item.Name == "Approve")
+            var amount = GridView1.GetSelectedFieldValues("amount");
+            Object amount2 = amount.First();
+            amount3= amount2.ToString();
+
+            if (e.Item.Name == "Pay")
                 {
-                    Deals deal = new Deals();
-                    deal.id = Id;
-                    deal.status = true;
-                    deal.approve = true;
-                    DealsContextProvider.createDeals(deal);
-            }
+                pcSearch.ShowOnPageLoad = true;
+                txtAmount.Text= amount2.ToString();
+                 }
 
                 if (e.Item.Name == "Reject")
                 {
@@ -87,9 +132,9 @@ namespace CPMv2 {
             if (e.MenuType == GridViewContextMenuType.Rows)
             {
                 e.ContextMenu.Items.Clear();
-                e.ContextMenu.Items.Add("Approve", "Approve").Image.IconID = "actions_apply_16x16";
+                e.ContextMenu.Items.Add("Pay", "Pay").Image.IconID = "actions_apply_16x16";
 
-                e.ContextMenu.Items.Add("Reject", "Reject").Image.IconID = "actions_cancel_16x16office2013";
+               // e.ContextMenu.Items.Add("Reject", "Reject").Image.IconID = "actions_cancel_16x16office2013";
 
             }
         }

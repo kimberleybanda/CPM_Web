@@ -138,7 +138,7 @@ namespace CPMv2 {
             {
                 e.ContextMenu.Items.Clear();
                 e.ContextMenu.Items.Add("View", "View").Image.IconID = "pdfviewer_zoom_svg_dark_16x16";
-                e.ContextMenu.Items.Add("Approve", "Approve").Image.IconID = "pdfviewer_zoom_svg_dark_16x16";
+                e.ContextMenu.Items.Add("Approve", "Approve").Image.IconID = "actions_apply_16x16";
 
             }
         }

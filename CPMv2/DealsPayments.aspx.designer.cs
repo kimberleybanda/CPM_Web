@@ -7,74 +7,92 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CPMv2.controls
+namespace CPMv2
 {
 
 
-    public partial class sidebar
+    public partial class DealsPayments
     {
 
         /// <summary>
-        /// divDashBoard control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDashBoard;
+        protected global::DevExpress.Web.ASPxGridView GridView1;
 
         /// <summary>
-        /// divDealsPayments control.
+        /// pcSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDealsPayments;
+        protected global::DevExpress.Web.ASPxPopupControl pcSearch;
 
         /// <summary>
-        /// divProductsSettings control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProductsSettings;
+        protected global::DevExpress.Web.ASPxPanel Panel1;
 
         /// <summary>
-        /// divProductSettings control.
+        /// ASPxFormLayout1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProductSettings;
+        protected global::DevExpress.Web.ASPxFormLayout ASPxFormLayout1;
 
         /// <summary>
-        /// divDealsApprovals control.
+        /// txtAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDealsApprovals;
+        protected global::DevExpress.Web.ASPxTextBox txtAmount;
 
         /// <summary>
-        /// divTrainingSettings control.
+        /// txtEcoPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTrainingSettings;
+        protected global::DevExpress.Web.ASPxTextBox txtEcoPhone;
 
         /// <summary>
-        /// divVerificationSettings control.
+        /// ASPxButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divVerificationSettings;
+        protected global::DevExpress.Web.ASPxButton ASPxButton1;
+
+        /// <summary>
+        /// ProductsDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ProductsDataSource;
+
+        /// <summary>
+        /// sidebar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CPMv2.controls.sidebar sidebar;
     }
 }

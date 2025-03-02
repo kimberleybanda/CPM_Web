@@ -10,7 +10,7 @@
     <hr class="horizontal dark mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li id="divDashBoard" runat="server" class="nav-item">
           <a class="nav-link active bg-gradient-dark text-white" href="Index.aspx">
             <i class="material-symbols-rounded opacity-5">dashboard</i>
             <span class="nav-link-text ms-1">Dashboard</span>
@@ -24,6 +24,13 @@
               </a>
           </li>
           
+          <li id="divDealsPayments" runat="server" class="nav-item">
+              <a class="nav-link text-dark" href="DealsPayments.aspx">
+                  <i class="material-symbols-rounded opacity-5">view_in_ar</i>
+                  <span class="nav-link-text ms-1">Deals Payments</span>
+              </a>
+          </li>
+          
           <li class="nav-item">
               <a class="nav-link text-dark" href="Training.aspx">
                   <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>
@@ -31,7 +38,7 @@
               </a>
           </li>
           
-          <li class="nav-item">
+        <!--  <li class="nav-item">
               <a class="nav-link text-dark" href="DiaryCreation.aspx">
                   <i class="material-symbols-rounded opacity-5">table_view</i>
                   <span class="nav-link-text ms-1">Logistics</span>
@@ -42,7 +49,7 @@
                   <i class="material-symbols-rounded opacity-5">receipt_long</i>
                   <span class="nav-link-text ms-1">Integrations</span>
               </a>
-          </li>
+          </li>-->
     
        
         <li class="nav-item mt-3">

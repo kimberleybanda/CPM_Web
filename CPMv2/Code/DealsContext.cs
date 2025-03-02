@@ -102,13 +102,64 @@ public class UserType
     public static class DealsContextProvider
     {
 
-        public static List<DealsCustom> GetDeals()
+        public static List<DealsCustom> GetDealsUsers(bool check,int userId)
+        {
+            List<DealsCustom> customDealsList = new List<DealsCustom>();
+            List<Deals> dealsList = new List<Deals>();
+            var client3 = new HttpClient();
+            {
+                String url = Helper.GetBaseUrl() + "v1/api/deals?check=" + check+ "&user_id="+userId;
+                var endpoint3 = new Uri(url);
+
+                try
+                {
+                    var result3 = client3.GetAsync(endpoint3).Result.Content.ReadAsStringAsync().Result;
+                    var cp3 = JsonConvert.DeserializeObject<RootList>(result3);
+
+                    if (cp3.code == 200)
+                    {
+                        dealsList = cp3.data;
+
+                        foreach (var item in dealsList)
+                        {
+
+                            customDealsList.Add(
+                                new DealsCustom(
+                                    item.amount,
+                                    item.id,
+                                    item.products.product.name,
+                                    item.qty,
+                                    item.status,
+                                    item.users.id
+
+                                )
+
+                            );
+                        }
+
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                catch (Exception eecc)
+                {
+                }
+
+                return customDealsList;
+
+            }
+        }
+
+        public static List<DealsCustom> GetDeals(bool check)
         {
             List<DealsCustom> customDealsList= new List<DealsCustom>();
             List<Deals> dealsList = new List<Deals>();
             var client3 = new HttpClient();
             {
-                String url = Helper.GetBaseUrl() + "v1/api/deals";
+                String url = Helper.GetBaseUrl() + "v1/api/deals?check="+check;
                 var endpoint3 = new Uri(url);
 
                 try
@@ -355,36 +406,39 @@ public class UserType
             {
                 var endpoint = new Uri(Helper.GetBaseUrl() + "v1/api/deals");
 
-                var newPost = new Deals();
+              /*  var newPost = new Deals();
 
                 newPost.id = deals.id;
                 newPost.amount = deals.amount == null ? 0 : deals.amount;
                 newPost.qty = deals.qty == null ? 0 : deals.qty;
                 newPost.status = deals.status == null ? false : deals.status;
                 newPost.approve = deals.approve == null ? false : deals.approve;
-                   var products = new Products();
+                  // var products = new Products();
                 if (deals.products != null)
                 {
-                    products.id =  deals.products.id;
+                    Object xxc=deals.products.id;
+                  //  products.id =  deals.products.id;
+                  newPost.products.id = 20;//(int)xxc;// deals.products.id;
                 }
                 else
                 {
-                    products.id = 0;
+                  //  products.id = 0;
                 }
                 
                    var users = new Users();
                 if (deals.users != null)
                 {
-                    users.id = deals.users.id;
+                   // users.id = deals.users.id;
+                    newPost.users.id = deals.users.id;
                 }
                 else
                 {
                     users.id = 0;
-                }
+                }*/
 
                 try
                 {
-                    var newPostJson = JsonConvert.SerializeObject(newPost);
+                    var newPostJson = JsonConvert.SerializeObject(deals);
                     var payload = new StringContent(newPostJson, Encoding.UTF8, "application/json");
                     var result = client.PostAsync(endpoint, payload).Result.Content.ReadAsStringAsync().Result;
                     var x = JsonConvert.DeserializeObject<Root>(result);
