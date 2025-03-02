@@ -16,23 +16,32 @@ namespace CPMv2 {
         protected void Page_Load(object sender, EventArgs e)
         {
             int x = 9;
-            List<UserTypes> userTypes = AuthHelper.getUserTypes();
-            drpUserType.DataSource = userTypes;
-            drpUserType.DataTextField = "name";
-            drpUserType.DataValueField = "id";
-            drpUserType.DataBind();
 
-            List<Countries> countries = AuthHelper.getCountry();
-            drpCountry.DataSource = countries;
-            drpCountry.DataTextField = "name";
-            drpCountry.DataValueField = "id";
-            drpCountry.DataBind();
 
-            List<City> cities = AuthHelper.getCity();
-            drpCity.DataSource = cities;
-            drpCity.DataTextField = "name";
-            drpCity.DataValueField = "id";
-            drpCity.DataBind();
+            if (IsPostBack)
+            {
+             
+            }
+            else
+            {
+                List<UserTypes> userTypes = AuthHelper.getUserTypes();
+                drpUserType.DataSource = userTypes;
+                drpUserType.DataTextField = "name";
+                drpUserType.DataValueField = "id";
+                drpUserType.DataBind();
+
+                List<Countries> countries = AuthHelper.getCountry();
+                drpCountry.DataSource = countries;
+                drpCountry.DataTextField = "name";
+                drpCountry.DataValueField = "id";
+                drpCountry.DataBind();
+
+                List<City> cities = AuthHelper.getCity();
+                drpCity.DataSource = cities;
+                drpCity.DataTextField = "name";
+                drpCity.DataValueField = "id";
+                drpCity.DataBind();
+            }
 
         }
 
@@ -49,9 +58,12 @@ namespace CPMv2 {
         {
 
         }
-
+        static int cityNum;
         protected void drpCity_OnChanged(object sender, EventArgs e)
         {
+            int x = 9;
+            String b = "";
+            cityNum = Convert.ToInt32(drpCity.SelectedValue);
 
         }
         public static bool ValidatePhoneNumber(string phoneNumber)
@@ -91,9 +103,16 @@ namespace CPMv2 {
             login.name = txtFullName.Text;
             login.phone = UserNameTextBox.Text;
             login.password = PasswordButtonEdit.Text;
+
+            login.countries = new Countries();
+            login.countries.id = int.Parse(drpCountry.SelectedValue);
+
             login.userType = new UserType2();
             login.userType.id = Convert.ToInt32(drpUserType.SelectedValue);
             login.userType.name = drpUserType.Text;
+
+            login.cities = new City();
+            login.cities.id = cityNum==0?Convert.ToInt32(drpCity.SelectedValue): cityNum;
 
 
             try

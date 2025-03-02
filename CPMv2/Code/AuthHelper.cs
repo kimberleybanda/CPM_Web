@@ -76,6 +76,10 @@ namespace CPMv2.Model {
         public string name { get; set; }
         public string password { get; set; }
         public string phone { get; set; }
+
+        public Countries countries { get; set; }
+
+        public City cities { get; set; }
         public UserType2 userType { get; set; }
     }
 

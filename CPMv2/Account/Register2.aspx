@@ -70,7 +70,7 @@
                     
                     <label class="form-label">Select City</label>
                     <div class="input-group input-group-outline mb-3">
-                        <asp:DropDownList OnSelectedIndexChanged="drpCity_OnChanged" class="form-control"  ID="drpCity" runat="server" Width="300px" AutoPostBack="true">
+                        <asp:DropDownList OnSelectedIndexChanged="drpCity_OnChanged" class="form-control"  ID="drpCity" runat="server" Width="300px" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                     

@@ -28,7 +28,6 @@
     <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
-
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'Sales', 'Expenses'],
@@ -37,7 +36,6 @@
                 ['2006', 660, 1120],
                 ['2007', 1030, 540]
             ]);
-
             var options = {
                 title: 'Company Performance',
                 curveType: 'function',
@@ -51,58 +49,60 @@
     </script>
     
     <script type="text/javascript">
-        var combinesGainsObject = [];
-        const url = baseUrl + '/server/consolidated';
-        const body = {
-            clientNo:<%= HttpContext.Current.Session["sessID"] %>,// '22738',
-            valuedate: formattedDate,//'1 jan 2023',
-            currency: '0',
-        };
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            // Fetch data from the API
+            fetch('http://localhost:8500/v1/api/sales_stats')
+                .then(response => response.json())
+                .then(data => {
+                    // Transform the data into the format required by Google Charts
+                    var chartData = [['Product', 'Count']];
+                    data.forEach(item => {
+                        chartData.push([item.productName, item.productCount]);
+                    });
 
+                    // Create the data table
+                    var dataTable = google.visualization.arrayToDataTable(chartData);
+                    // Set chart options
+                    var options = {
+                        title: 'Location Based Sales'
+                    };
+                    // Instantiate and draw the chart
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(dataTable, options);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+    </script>
+    
+    
+    <script type="text/javascript">
+          google.charts.load('current', { 'packages': ['corechart'] });
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+              // Fetch data from the API
+              fetch('http://localhost:8500/v1/api/sales_stats2')
+                  .then(response => response.json())
+                  .then(data => {
+                      // Transform the data into the format required by Google Charts
+                      var chartData = [['Product', 'Count']];
+                      data.forEach(item => {
+                          chartData.push([item.productName, item.productCount]);
+                      });
 
-        fetch(url, {
-            method: 'POST', // Send a POST request instead of a GET request
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(body),
-        })
-            .then(response => response.json())
-            .then(data => {
-                assetTypeObject = data.assetType;//
-                GainsObject = data.gainsNDates;
-                CounterObject = data.counterArray;
-
-                useAssetTypes();
-            })
-            .catch(error => {
-                console.error('this is the error gotten' + error);
-            });
-
-
-
-            google.charts.load('current', { 'packages': ['corechart'] });
-            google.charts.setOnLoadCallback(drawChart);
-
-            function drawChart() {
-
-                var data = google.visualization.arrayToDataTable([
-                    ['Task', 'Hours per Day'],
-                    ['Work', 11],
-                    ['Eat', 2],
-                    ['Commute', 2],
-                    ['Watch TV', 2],
-                    ['Sleep', 7]
-                ]);
-
-                var options = {
-                    title: 'My Daily Activities'
-                };
-
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-                chart.draw(data, options);
-            }
+                      // Create the data table
+                      var dataTable = google.visualization.arrayToDataTable(chartData);
+                      // Set chart options
+                      var options = {
+                          title: 'Product Sales Statistics'
+                      };
+                      // Instantiate and draw the chart
+                      var chart = new google.visualization.BarChart(document.getElementById('histchart'));
+                      chart.draw(dataTable, options);
+                  })
+                  .catch(error => console.error('Error fetching data:', error));
+          }
     </script>
     
 
@@ -171,9 +171,6 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-2 ps-3">
-              <p class="mb-0 text-sm"><span class="text-success font-weight-bolder">+55% </span>than last week</p>
-            </div>
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -190,9 +187,6 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-2 ps-3">
-              <p class="mb-0 text-sm"><span class="text-success font-weight-bolder">+3% </span>than last month</p>
-            </div>
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -210,9 +204,6 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-2 ps-3">
-              <p class="mb-0 text-sm"><span class="text-danger font-weight-bolder">-2% </span>than yesterday</p>
-            </div>
           </div>
         </div>
         <div class="col-xl-3 col-sm-6">
@@ -229,9 +220,6 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-2 ps-3">
-              <p class="mb-0 text-sm"><span class="text-success font-weight-bolder">+5% </span>than yesterday</p>
-            </div>
           </div>
         </div>
       </div>
@@ -240,7 +228,7 @@
           <div class="col-lg-6 col-md-6 mt-4 mb-4">
               <div class="card">
                   <div class="card-body">
-                      <h6 class="mb-0">Deals</h6>
+                      <h6 class="mb-0">Sales</h6>
                       <div class="pe-2">
                           <div class="chart">
                               <!-- Pie Chart Container -->
@@ -258,11 +246,11 @@
           <div class="col-lg-6 col-md-6 mt-4 mb-4">
               <div class="card">
                   <div class="card-body">
-                      <h6 class="mb-0">Sales & Sales Forecasts</h6>
+                      <h6 class="mb-0">High Selling Product</h6>
                       <div class="pe-2">
                           <div class="chart">
                               <!-- Pie Chart Container -->
-                              <div id="curve_chart" style="width: 100%; height: 300px"></div>
+                              <div id="histchart" style="width: 100%; height: 300px"></div>
                           </div>
                       </div>
                       <hr class="dark horizontal">
