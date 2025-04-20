@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Async="true" AutoEventWireup="true" MasterPageFile="~/Root.master" CodeBehind="Register2.aspx.cs" Inherits="CPMv2.Register2" Title="Sign In" %>
+﻿<%@ Page Language="C#" Async="true" AutoEventWireup="true" MasterPageFile="~/Root.master" CodeBehind="Register3.aspx.cs" Inherits="CPMv3.Register3" Title="Sign In" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="Head">
     <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/SignInRegister.css") %>' />
@@ -17,6 +17,28 @@
     <script src="../Content/assets/js/core/bootstrap.min.js"></script>
     <script src="../Content/assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../Content/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    
+    <!-- JavaScript for Webcam -->
+    <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                // Get the photo parameter from the query string
+                const urlParams = new URLSearchParams(window.location.search);
+                const base64String = urlParams.get("photo");
+
+                if (base64String) {
+                    // Construct data URL
+                    const dataUrl = `data:image/jpeg;base64,${base64String}`;
+                    const img = document.getElementById("capturedPhoto");
+                    img.src = dataUrl;
+                    img.style.display = "block"; // Show the image
+                    console.log("Image loaded from base64 string.");
+                } else {
+                    console.error("No photo parameter found in query string.");
+                    alert("No photo data available.");
+                }
+            });
+        </script>
+
 </asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="PageContent" runat="server">
@@ -52,6 +74,10 @@
               <div class="card-body">
                 <form role="form" class="text-start">
 
+                    <div class=" mb-3">
+                        <img id="capturedPhoto" alt="Captured Photo" style="max-width: 200px; display: none;" />
+                    </div>
+
                     <label class="form-label">Full Name</label>
                     <div class="input-group input-group-outline my-3">
                         <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" />
@@ -59,7 +85,7 @@
 
                     <label class="form-label">Phone</label>
                   <div class="input-group input-group-outline my-3">
-                      <asp:TextBox ID="UserNameTextBox" runat="server" CssClass="form-control" />
+                      <asp:TextBox ValidationExpression="^2637[0-9]{8}$" ID="UserNameTextBox" runat="server" CssClass="form-control" />
                   </div>
                     
                     <label class="form-label">Select Country</label>
@@ -70,7 +96,7 @@
                     
                     <label class="form-label">Select City</label>
                     <div class="input-group input-group-outline mb-3">
-                        <asp:DropDownList OnSelectedIndexChanged="drpCity_OnChanged" class="form-control"  ID="drpCity" runat="server" Width="300px" AutoPostBack="true">
+                        <asp:DropDownList OnSelectedIndexChanged="drpCity_OnChanged" class="form-control"  ID="drpCity" runat="server" Width="300px" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                     
@@ -81,6 +107,7 @@
                         <asp:DropDownList OnSelectedIndexChanged="drpUserType_OnChanged" class="form-control"  ID="drpUserType" runat="server" Width="300px" AutoPostBack="true">
                         </asp:DropDownList>
                     </div>
+
                     
                     <label class="form-label">Upload National ID</label>
                     <div class="input-group input-group-outline mb-3">

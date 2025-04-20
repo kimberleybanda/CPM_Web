@@ -5,18 +5,27 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Leroy Chiyangwa\source\repos\CPMv2\CPMv2\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2025-02-27T10:14:51.0802002Z;True|2025-02-12T22:38:34.1168911+02:00;True|2025-02-06T06:09:43.5216136+02:00;</History>
+    <History>True|2025-04-20T02:07:29.9575947Z;True|2025-04-20T04:04:20.4812008+02:00;True|2025-04-20T04:04:01.9255263+02:00;True|2025-04-20T03:34:48.5736213+02:00;True|2025-04-07T19:25:51.8872741+02:00;False|2025-04-07T19:24:46.0954369+02:00;True|2025-04-05T12:18:23.3498576+02:00;True|2025-04-05T12:18:01.6102209+02:00;True|2025-03-26T11:09:30.4212481+02:00;True|2025-03-26T11:03:29.7399230+02:00;True|2025-03-02T23:58:01.1649331+02:00;True|2025-02-27T12:14:51.0802002+02:00;True|2025-02-12T22:38:34.1168911+02:00;True|2025-02-06T06:09:43.5216136+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Account/Camera2.aspx">
+      <publishTime>04/20/2025 02:36:16</publishTime>
+    </File>
+    <File Include="Account/PasswordOtp.aspx">
+      <publishTime>04/06/2025 18:22:31</publishTime>
+    </File>
+    <File Include="Account/PasswordReset.aspx">
+      <publishTime>04/06/2025 17:43:05</publishTime>
+    </File>
     <File Include="Account/Register.aspx">
       <publishTime>01/31/2025 21:01:21</publishTime>
     </File>
     <File Include="Account/Register2.aspx">
-      <publishTime>02/26/2025 04:04:08</publishTime>
+      <publishTime>04/20/2025 02:44:39</publishTime>
     </File>
     <File Include="Account/SignIn.aspx">
-      <publishTime>02/06/2025 06:07:09</publishTime>
+      <publishTime>04/20/2025 03:33:08</publishTime>
     </File>
     <File Include="App_Data/ApplicationMenuDataSource.sitemap">
       <publishTime>02/04/2025 21:27:44</publishTime>
@@ -37,10 +46,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:22</publishTime>
     </File>
     <File Include="bin/CPMv2.dll">
-      <publishTime>02/27/2025 12:14:48</publishTime>
+      <publishTime>04/20/2025 04:07:24</publishTime>
     </File>
     <File Include="bin/CPMv2.pdb">
-      <publishTime>02/27/2025 12:14:48</publishTime>
+      <publishTime>04/20/2025 04:07:24</publishTime>
     </File>
     <File Include="bin/de/DevExpress.Data.v22.1.resources.dll">
       <publishTime>01/06/2025 09:44:35</publishTime>
@@ -111,6 +120,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/DevExpress.XtraScheduler.v22.1.Core.dll">
       <publishTime>01/06/2025 09:44:52</publishTime>
     </File>
+    <File Include="bin/Emgu.CV.dll">
+      <publishTime>01/08/2025 04:22:34</publishTime>
+    </File>
     <File Include="bin/es/DevExpress.Data.v22.1.resources.dll">
       <publishTime>01/06/2025 09:44:35</publishTime>
     </File>
@@ -159,8 +171,77 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/ja/DevExpress.XtraScheduler.v22.1.Core.resources.dll">
       <publishTime>01/06/2025 09:44:52</publishTime>
     </File>
+    <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>10/29/2024 04:40:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>10/23/2021 01:51:24</publishTime>
+    </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>03/08/2023 09:09:56</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.Blob.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.CPlusPlus.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.DebuggerVisualizers.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.Extensions.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.Gpu.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.MachineLearning.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharp.UserInterface.dll">
+      <publishTime>04/18/2013 19:41:58</publishTime>
+    </File>
+    <File Include="bin/OpenCvSharpExtern.dll">
+      <publishTime>04/15/2025 08:48:58</publishTime>
+    </File>
+    <File Include="bin/Pipelines.Sockets.Unofficial.dll">
+      <publishTime>05/04/2023 16:36:38</publishTime>
+    </File>
+    <File Include="bin/StackExchange.Redis.dll">
+      <publishTime>03/07/2025 02:07:10</publishTime>
+    </File>
+    <File Include="bin/System.Buffers.dll">
+      <publishTime>02/19/2020 12:05:18</publishTime>
+    </File>
+    <File Include="bin/System.IO.Pipelines.dll">
+      <publishTime>10/29/2024 04:43:14</publishTime>
+    </File>
+    <File Include="bin/System.Memory.dll">
+      <publishTime>05/08/2022 05:31:02</publishTime>
+    </File>
+    <File Include="bin/System.Numerics.Vectors.dll">
+      <publishTime>05/15/2018 15:29:44</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>10/23/2021 01:40:18</publishTime>
+    </File>
+    <File Include="bin/System.Text.Encodings.Web.dll">
+      <publishTime>10/29/2024 04:39:34</publishTime>
+    </File>
+    <File Include="bin/System.Text.Json.dll">
+      <publishTime>10/29/2024 04:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Channels.dll">
+      <publishTime>10/19/2020 20:46:24</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>02/19/2020 12:05:18</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>05/15/2018 15:29:52</publishTime>
     </File>
     <File Include="Content/assets/css/material-dashboard.css">
       <publishTime>02/04/2025 14:52:59</publishTime>
@@ -204,6 +285,207 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/assets/fonts/nucleo.woff2">
       <publishTime>02/04/2025 14:52:59</publishTime>
     </File>
+    <File Include="Content/assets/img - Copy/apple-icon.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/bg-pricing.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/bg-smart-home-1.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/bg-smart-home-2.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/bruce-mars.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/down-arrow-dark.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/down-arrow-white.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/down-arrow.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/drake.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/favicon.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/home-decor-1.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/home-decor-2.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/home-decor-3.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/icons/flags/AU.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/icons/flags/BR.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/icons/flags/DE.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/icons/flags/GB.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/icons/flags/US.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/chat.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/danger-chat-ill.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/dark-lock-ill.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/error-404.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/error-500.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/illustration-lock.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/illustration-reset.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/illustration-signin.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/illustration-signup.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/illustration-verification.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/lock.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/pattern-tree.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/illustrations/rocket-white.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/ivana-square.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/ivana-squares.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/ivancik.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/kal-visuals-square.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logo-ct-dark.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logo-ct.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-coinbase.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-nasa.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-netflix.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-pinterest.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-spotify.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/logos/gray-logos/logo-vodafone.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/marie.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/meeting.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/office-dark.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/product-12.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/bootstrap.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/creative-tim.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/devto.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/github.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/google-webdev.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/icon-bulb.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/icon-sun-cloud.png">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-asana.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-atlassian.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-invision.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-jira.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-slack.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-spotify.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/small-logos/logo-xd.svg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/team-1.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/team-2.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/team-3.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/team-4.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/team-5.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
+    <File Include="Content/assets/img - Copy/vr-bg.jpg">
+      <publishTime>04/15/2025 07:06:24</publishTime>
+    </File>
     <File Include="Content/assets/img/apple-icon.png">
       <publishTime>02/04/2025 14:52:59</publishTime>
     </File>
@@ -218,6 +500,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Content/assets/img/bruce-mars.jpg">
       <publishTime>02/04/2025 14:52:59</publishTime>
+    </File>
+    <File Include="Content/assets/img/camera.png">
+      <publishTime>04/15/2025 07:06:41</publishTime>
     </File>
     <File Include="Content/assets/img/down-arrow-dark.svg">
       <publishTime>02/04/2025 14:52:59</publishTime>
@@ -1384,10 +1669,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:23</publishTime>
     </File>
     <File Include="controls/sidebar.ascx">
-      <publishTime>02/27/2025 11:06:04</publishTime>
+      <publishTime>03/02/2025 19:17:01</publishTime>
     </File>
     <File Include="DealsApprovals.aspx">
       <publishTime>02/11/2025 21:59:41</publishTime>
+    </File>
+    <File Include="DealsPayments.aspx">
+      <publishTime>04/06/2025 16:55:24</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>01/31/2025 21:01:24</publishTime>
@@ -1402,16 +1690,40 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/31/2025 21:01:24</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>02/12/2025 11:38:16</publishTime>
+      <publishTime>03/02/2025 13:45:59</publishTime>
+    </File>
+    <File Include="invoice_print.aspx">
+      <publishTime>04/06/2025 16:41:03</publishTime>
+    </File>
+    <File Include="libOpenCvSharpExtern.so">
+      <publishTime>04/15/2025 08:48:59</publishTime>
+    </File>
+    <File Include="OpenCvSharp.Blob.dll.config">
+      <publishTime>04/15/2025 08:48:59</publishTime>
+    </File>
+    <File Include="OpenCvSharp.CPlusPlus.dll.config">
+      <publishTime>04/15/2025 08:48:59</publishTime>
+    </File>
+    <File Include="OpenCvSharp.dll.config">
+      <publishTime>04/15/2025 08:48:59</publishTime>
+    </File>
+    <File Include="OpenCvSharp.MachineLearning.dll.config">
+      <publishTime>04/15/2025 08:48:59</publishTime>
+    </File>
+    <File Include="OpenCvSharpExtern.dll">
+      <publishTime>04/15/2025 08:48:58</publishTime>
     </File>
     <File Include="Products.aspx">
-      <publishTime>02/06/2025 00:53:32</publishTime>
+      <publishTime>03/26/2025 11:08:16</publishTime>
     </File>
     <File Include="ProductSettings.aspx">
       <publishTime>02/04/2025 14:53:55</publishTime>
     </File>
     <File Include="ProductsSettings.aspx">
       <publishTime>02/06/2025 01:35:41</publishTime>
+    </File>
+    <File Include="Register2.aspx">
+      <publishTime>04/20/2025 00:53:59</publishTime>
     </File>
     <File Include="Root.master">
       <publishTime>02/04/2025 21:42:19</publishTime>
@@ -1426,10 +1738,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2025 14:53:54</publishTime>
     </File>
     <File Include="VerificationSettings.aspx">
-      <publishTime>02/27/2025 12:07:59</publishTime>
+      <publishTime>02/27/2025 16:08:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/06/2025 06:09:41</publishTime>
+      <publishTime>04/20/2025 03:34:46</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CPMv2
+namespace CPMv3
 {
 
 
-    public partial class Register2
+    public partial class Register3
     {
 
         /// <summary>

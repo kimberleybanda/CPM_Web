@@ -85,7 +85,7 @@ namespace CPMv2 {
                 // zoomNavigator.ImageSourceFolder= "Uploads";
                 }
 
-                if (e.Item.Name == "Approve")
+                if (e.Item.Name == "Reject")
                 {
               
                 var client = new HttpClient();
@@ -138,7 +138,7 @@ namespace CPMv2 {
             {
                 e.ContextMenu.Items.Clear();
                 e.ContextMenu.Items.Add("View", "View").Image.IconID = "pdfviewer_zoom_svg_dark_16x16";
-                e.ContextMenu.Items.Add("Approve", "Approve").Image.IconID = "actions_apply_16x16";
+                e.ContextMenu.Items.Add("Reject", "Reject").Image.IconID = "actions_apply_16x16";
 
             }
         }

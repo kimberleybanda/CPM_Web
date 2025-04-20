@@ -42,7 +42,7 @@
                   e.processOnServer = true;
                   e.usePostBack = true;
               }
-              if (e.item.name == "Approve") {
+              if (e.item.name == "Reject") {
                   e.processOnServer = true;
                   e.usePostBack = true;
               }
@@ -102,7 +102,7 @@
               <div class="card-header pb-0 p-3">
                   <div class="row">
                       <div class="col-6 d-flex align-items-center">
-                          <h6 class="mb-0">Product Price Settings </h6>
+                          <h6 class="mb-0">Verification Settings </h6>
                       </div>
                   </div>
               </div>

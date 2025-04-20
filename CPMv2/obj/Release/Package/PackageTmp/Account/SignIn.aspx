@@ -17,6 +17,21 @@
     <script src="../Content/assets/js/core/bootstrap.min.js"></script>
     <script src="../Content/assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../Content/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67e3c0d7fdf8c219086c0831/1in8qijcm';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+    <!--End of Tawk.to Script-->
 </asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="PageContent" runat="server">
@@ -62,12 +77,12 @@
                       <asp:TextBox ID="PasswordButtonEdit" runat="server" CssClass="form-control" />
                   </div>
                   <div class="text-center">
-                      <asp:Button OnClick="SignInButton_Click" ID="btnLogin"  class="btn bg-gradient-dark w-100 my-4 mb-2" Text="Create" runat="server"/>
+                      <asp:Button OnClick="SignInButton_Click" ID="btnLogin"  class="btn bg-gradient-dark w-100 my-4 mb-2" Text="Login" runat="server"/>
 <%--                    <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>--%>
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Don't have an account?
-                    <a href="../Account/Register2.aspx" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                    <a href="../Account/Camera2.aspx" class="text-primary text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </form>
               </div>

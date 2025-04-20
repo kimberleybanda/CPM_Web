@@ -24,6 +24,15 @@ namespace CPMv2
         protected global::DevExpress.Web.ASPxGridView GridView1;
 
         /// <summary>
+        /// ShowNewWindow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.GridViewCommandColumnCustomButton ShowNewWindow;
+
+        /// <summary>
         /// pcSearch control.
         /// </summary>
         /// <remarks>
